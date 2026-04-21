@@ -10,7 +10,11 @@ public class DBServiceImpl implements service {
 	public void connectDb() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			con=DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/studentcrm","root","toor");
+			con = DriverManager.getConnection(
+    "jdbc:mysql://shinkansen.proxy.rlwy.net:10875/railway?useSSL=false&allowPublicKeyRetrieval=true",
+    "root",
+    "lyKIlDtQShYDdyKXgbqeHhLvJHVRbKta"
+);
 			stmnt=con.createStatement();
 			
 		}catch(Exception e) {
